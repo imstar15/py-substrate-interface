@@ -930,7 +930,7 @@ class SubstrateInterface:
         -------
 
         """
-        response = self.rpc_request("chain_getRuntimeVersion", [block_hash])
+        response = self.rpc_request("state_getRuntimeVersion", [block_hash])
 
         if 'error' in response:
             raise SubstrateRequestException(response['error']['message'])
